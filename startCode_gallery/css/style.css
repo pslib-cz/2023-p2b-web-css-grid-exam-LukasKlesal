@@ -119,15 +119,44 @@ main {
 .button--center {position: relative; transform: translate(-50%, 0%); left: 50%; margin-top: 1rem;}
 
 /*GALERIE*/
-
-
-
+.gallery{
+    display: grid;
+    overflow-x: scroll;
+    gap: 0.5em;
+    grid-template-columns: repeat(1, 1fr);
+}
+#galerie{
+    display: grid;
+    background-color: #4C2121;
+}
 
 @media (min-width: 700px) {
-    
+    #galerie{
+        display: grid;
+        background-color: #4C2121;
+    }
+    .gallery{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5em;
+        background-color: #4C2121;
+        overflow-x: visible;
+    }
+    .gItem--3, .gItem--6{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 }
 @media (min-width: 1200px) {
- 
+    .gallery{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: .5em;
+        background-color: #4C2121;
+        overflow-x: visible;
+    } 
 }
 .gallery__buttons {
     transform: translate(-50%, 0%); 
